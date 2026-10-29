@@ -1,0 +1,16 @@
+{
+  "name": "mindlist",
+  "description": "The mindlist plugin for Claude and Codex: your saves, connected and put to use.",
+  "owner": {
+    "name": "mindlist",
+    "url": "https://mindlist.ai"
+  },
+  "plugins": [
+    {
+      "name": "mindlist",
+      "source": "./plugins/mindlist",
+      "description": "Your mindlist saves in Claude and Codex: one install connects them and adds a skill that finds, cites and summarizes them.",
+      "homepage": "https://mindlist.ai"
+    }
+  ]
+}

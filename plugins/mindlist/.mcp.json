@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mindlist": {
+      "type": "http",
+      "url": "https://mindlist.ai/api/v1/mcp"
+    }
+  }
+}

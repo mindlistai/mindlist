@@ -1,0 +1,13 @@
+{
+  "name": "mindlist",
+  "displayName": "mindlist",
+  "version": "1.0.0",
+  "description": "Your mindlist saves in Claude and Codex: one install connects them and adds a skill that finds, cites and summarizes them.",
+  "author": {
+    "name": "mindlist",
+    "url": "https://mindlist.ai"
+  },
+  "homepage": "https://mindlist.ai",
+  "repository": "https://github.com/mindlistai/mindlist",
+  "license": "MIT"
+}

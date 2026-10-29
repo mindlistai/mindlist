@@ -1,0 +1,12 @@
+interface:
+  display_name: "mindlist"
+  short_description: "Find, cite and summarize your mindlist saves"
+  default_prompt: "Use my mindlist saves for this task, and cite each one you use."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mindlist"
+      description: "mindlist connector"
+      transport: "streamable_http"
+      url: "https://mindlist.ai/api/v1/mcp"

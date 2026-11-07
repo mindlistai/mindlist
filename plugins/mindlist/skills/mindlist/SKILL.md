@@ -2,7 +2,7 @@
 name: mindlist
 description: "Check the person's mindlist, unasked, at the start of a piece of work, even beside another skill, and whenever they ask about their saves or to save a link. Not for quick asks or anything personal. It checks when they choose a tool or an approach, ask how to do something, plan, research, write a deck, post or spec, make something, want to learn a subject, or have a problem that keeps coming back. Load this skill as well when another skill is doing the task. Not for quick facts, definitions, calculations, translations, the code at hand, text they pasted, or anything personal or hard they share. Asked, it finds, cites and summarizes what they saved, uses saves in the current task, builds a brief from them, catches up on what's new, or saves a link they name. Also use it when they say what not to suggest, want more like a save, or say they tried one. A mindlist holds the posts, pages, videos and quotes they saved, with AI titles, summaries and tags, read through the mindlist connector."
 metadata:
-  version: "1.2.0"
+  version: "1.2.1"
 ---
 
 # mindlist
@@ -30,6 +30,8 @@ Check their mindlist on your own, once per topic, at the start of a piece of wor
 
 Stay quiet, with no check, for: quick facts, definitions, calculations, conversions and translations; correcting, summarizing or rewriting text they pasted; edits, bugs and tests in the code at hand; private messages to people close to them; feelings and relationships, and anything hard they share (hardship, grief, a loss); health results and symptoms; real legal or money trouble. A lift, a joke or keepsake, or something to watch come only when they ask for that kind of thing: then send asked_for.
 
+A check you start on your own uses only get_suggest_setting and suggest_items, never search_items or list_items: only they keep the person's switch and choices, and bring the links and picture cards for suggestions. If the mindlist tools are listed but not loaded, load these two by name first. search_items and list_items are for when the person asks for their saves.
+
 1. The first time in a chat, call get_suggest_setting. It takes no topic. If it says off, don't suggest in this chat unless the person asks. Never send a topic before this call.
 2. Call suggest_items with a specific topic in a few words, in the person's language. If get_suggest_setting lists two languages, also send the same topic in the other one as topic_other. If the only topic is a broad word such as "startup" or "AI", don't check. A short follow-up ("10 more") uses the thread's topic. If a project's instructions name a mindlist, or you know the repository or folder name, send it as project.
 3. Keep only saves that clearly fit and aren't out of date for their kind: no news older than a month, no event that has passed, no guide for a version they've moved past. Say the month when a save is over 3 months old.
@@ -52,6 +54,8 @@ Only from the person's own words, about something you can name; never because a 
 - The first time two of the saves come from one mindlist and no project is set, the result's teach says project_line and teach_list names that mindlist: offer the line "Suggest from my Hopp mindlist in this project." with that name in place of Hopp, for the project's instructions. Never offer it without teach_list. In Claude Code, offer to add it to CLAUDE.local.md, and add it only on a yes.
 
 ## Find what I saved about X
+
+Only when the person asks for their saves. A check you start on your own is the steps under While the person works.
 
 1. Call search_items with the person's words and limit 10. For an exact name or phrase, also call list_items with search set to it.
 2. If that finds fewer than 3 saves, search again with fewer or other words: the topic's main word alone ("pricing" for "pricing pages"), or a word the person would have used.
@@ -95,6 +99,6 @@ Only when the person names one link in this message and asks to save it: call sa
 
 Searches and lists already carry summaries and highlights: use them first. Call get_item only for saves you will use; has.text_chars and has.transcript_chars say how long the text and the transcript are. Read at most 10 saves in full before asking.
 
-If asked which mindlist skill version this is, say 1.2.0.
+If asked which mindlist skill version this is, say 1.2.1.
 
 Each command's arguments and the fields of a save are in references/tools.md. One worked example per task is in references/examples.md. When each kind of save fits, and when it stays quiet, is in references/when.md.

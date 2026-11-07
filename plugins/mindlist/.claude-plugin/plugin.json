@@ -1,7 +1,7 @@
 {
   "name": "mindlist",
   "displayName": "mindlist",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Your mindlist saves in Claude and Codex: one install connects them and adds a skill that finds, cites and summarizes them.",
   "author": {
     "name": "mindlist",

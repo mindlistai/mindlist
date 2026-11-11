@@ -37,4 +37,6 @@ Then start a new Codex session.
 
 ## Updates
 
-Claude updates plugins from this catalog by itself. Claude Code: `/plugin marketplace update mindlist`. Codex: `codex plugin marketplace upgrade`. The changes are in [CHANGELOG.md](CHANGELOG.md).
+Claude and Claude Code don't update plugins from this catalog until you turn it on. In Claude: Customize, Plugins, Manage marketplaces, then turn on Sync automatically for mindlist. In Claude Code: `/plugin`, the Marketplaces tab, mindlist, then Enable auto-update.
+
+To update now instead: in Claude, Check for updates; in Claude Code, `claude plugin update mindlist@mindlist`; in Codex, `codex plugin marketplace upgrade`. The changes are in [CHANGELOG.md](CHANGELOG.md).

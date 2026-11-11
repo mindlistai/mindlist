@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.2
+
+When mindlist isn't signed in yet in Claude Code, it says how: type /mcp, choose mindlist, then Authenticate.
+
 ## 1.2.1
 
 Suggestions now always follow your switch and your choices.

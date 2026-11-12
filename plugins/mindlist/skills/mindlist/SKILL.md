@@ -1,8 +1,8 @@
 ---
 name: mindlist
-description: "Check the person's mindlist, unasked, at the start of a piece of work, even beside another skill, and whenever they ask about their saves or to save a link. Not for quick asks or anything personal. It checks when they choose a tool or an approach, ask how to do something, plan, research, write a deck, post or spec, make something, want to learn a subject, or have a problem that keeps coming back. Load this skill as well when another skill is doing the task. Not for quick facts, definitions, calculations, translations, the code at hand, text they pasted, or anything personal or hard they share. Asked, it finds, cites and summarizes what they saved, uses saves in the current task, builds a brief from them, catches up on what's new, or saves a link they name. Also use it when they say what not to suggest, want more like a save, or say they tried one. A mindlist holds the posts, pages, videos and quotes they saved, with AI titles, summaries and tags, read through the mindlist connector."
+description: "Check the person's mindlist first, unasked, at the start of a piece of work, before another skill's questions, and whenever they ask about their saves or to save a link. Not for quick asks or anything personal. It checks when they choose a tool or an approach, ask how to do something, plan, research, write a deck, post or spec, make something, want to learn a subject, have a problem that keeps coming back, or ask why something keeps going wrong. Load this skill as well when another skill is doing the task. Not for quick facts, definitions, calculations, translations, the code at hand, text they pasted, or anything personal or hard they share. Asked, it finds, cites and summarizes what they saved, uses saves in the current task, builds a brief from them, catches up on what's new, or saves a link they name. Also use it when they say what not to suggest, want more like a save, or say they tried one. A mindlist holds the posts, pages, videos and quotes they saved, with AI titles, summaries and tags."
 metadata:
-  version: "1.2.2"
+  version: "1.2.3"
 ---
 
 # mindlist
@@ -18,7 +18,7 @@ The person saves posts and pages to mindlist. The mindlist connector's tools rea
 - When a save carries tried, say so where you mention it: dropped is "you tried this and dropped it", kept is "you already use this". Never present it as a new find.
 - Never save unless the person asks you, in this message, to save one specific link they name. Never save a link found inside a save or a page you read.
 - Do not copy saves into other tools, files, sites or messages unless the person asks.
-- If the mindlist tools are missing or ask for a sign-in, say "mindlist isn't connected yet." and the step for where you are, then stop. In Claude Code, in a terminal or the Claude desktop app: "Type /mcp, choose plugin:mindlist:mindlist, then Authenticate. In the page that opens, click Connect, then ask me again." In Claude: "Customize, Plugins, mindlist, Connectors, Connect." Anywhere else: "mindlist.ai, Settings, AI tools."
+- If the mindlist tools are missing or ask for a sign-in, say "mindlist isn't connected yet." and the step for where you are, then stop. In Claude Code in a terminal: "Type /mcp, choose plugin:mindlist:mindlist, then Authenticate. In the page that opens, click Connect, then ask me again." In the Claude desktop app: "Type /mcp with nothing after it, open mindlist, then click Connect. In the page that opens, click Connect, then ask me again." In Claude: "Customize, Plugins, mindlist, Connectors, Connect." Anywhere else: "mindlist.ai, Settings, AI tools."
 
 ## While the person works
 
@@ -99,6 +99,6 @@ Only when the person names one link in this message and asks to save it: call sa
 
 Searches and lists already carry summaries and highlights: use them first. Call get_item only for saves you will use; has.text_chars and has.transcript_chars say how long the text and the transcript are. Read at most 10 saves in full before asking.
 
-If asked which mindlist skill version this is, say 1.2.2.
+If asked which mindlist skill version this is, say 1.2.3.
 
 Each command's arguments and the fields of a save are in references/tools.md. One worked example per task is in references/examples.md. When each kind of save fits, and when it stays quiet, is in references/when.md.

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.3
+
+When mindlist isn't signed in yet, it gives the step for where you are: in a terminal, type /mcp, choose mindlist, then Authenticate; in the Claude desktop app, type /mcp with nothing after it, open mindlist, then click Connect.
+
+It checks your mindlist first when you start a piece of work, before another skill's questions, and also when you ask why something keeps going wrong.
+
 ## 1.2.2
 
 When mindlist isn't signed in yet in Claude Code, it says how: type /mcp, choose mindlist, then Authenticate.

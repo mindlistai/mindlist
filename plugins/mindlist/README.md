@@ -10,6 +10,8 @@ Ask "What did I save about pricing pages?", "Use my saves for this", "Turn my sa
 
 Claude and Codex use your mindlist when it's relevant. When you start a piece of work (choosing a tool, planning, researching, writing, making something, learning, or a problem that keeps coming back), the skill can send your mindlist a few words about it, once per topic. When saves clearly fit, up to 3, it adds a short line for each, quoting your own note if you wrote one, says how many more there are, and offers what fits: to evaluate them, compare them, use them in your draft, or pull them all. If nothing clearly fits, you see nothing. It stays quiet on quick questions, the code at hand, text you pasted, and anything personal or hard.
 
+In Claude, the saves it finds can show as picture cards: tap one to see the whole save.
+
 Tell it any time "not these", "more like this" or "I tried that": mindlist keeps that choice, for a save, a site or a tag, and it holds in your next chat and in every app, even on a Read only connection. See and undo every choice, or turn suggestions off, on mindlist.ai, Settings, AI tools.
 
 ## What it reads and never writes

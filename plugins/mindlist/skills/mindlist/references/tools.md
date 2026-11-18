@@ -4,7 +4,7 @@ Every call made while following the skill also takes via: "skill". It changes no
 
 ## Reading
 
-Where the person's app shows saves as picture cards, an answer that holds saves (search_items, list_items, get_item, get_new_items, suggest_items) also has cards: true. The person then sees those saves already.
+Where the person's app shows saves as picture cards, an answer from search_items or suggest_items also has cards: true. The person then sees those saves already, and opens one by tapping its card: name them without links. list_items, get_item and get_new_items never show cards.
 
 | Command | Arguments | Gives |
 | --- | --- | --- |

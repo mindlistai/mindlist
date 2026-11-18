@@ -4,9 +4,9 @@ One install connects Claude or Codex to your mindlist saves and adds a skill tha
 
 ## Claude (web and desktop, paid plans)
 
-1. Open https://claude.ai/customize/plugins, click Add, choose Add marketplace, paste `mindlistai/mindlist`, confirm.
-2. In Discover, choose mindlist, click Add.
-3. Open mindlist, then its Connectors tab. Click Add, then Connect, and sign in with the email code mindlist sends.
+1. Open https://mindlist.ai/connect/claude. Claude opens its Add custom connector box with mindlist filled in: click Continue, Add, then Connect, and sign in with the email code mindlist sends.
+2. To make Claude check mindlist by itself, open https://claude.ai/customize/plugins, click Add, choose Add marketplace, paste `mindlistai/mindlist`, confirm.
+3. In Discover, choose mindlist, click Add. Its Connectors tab says Connected; if it shows Connect, click it and sign in.
 4. Ask: "What did I save about onboarding?"
 
 ## Claude Code
@@ -34,7 +34,7 @@ Then start a new Codex session.
 
 ## Other ways
 
-- **Claude, Free plan:** add the connector at https://claude.ai/customize/connectors (Add custom connector, the address `https://mindlist.ai/api/v1/mcp`), then upload the skill: download `mindlist-skill.zip` from https://github.com/mindlistai/mindlist/releases/latest and choose Customize, Skills, +, Create skill, Upload a skill (code execution must be on).
+- **Claude, Free plan:** add the connector at https://mindlist.ai/connect/claude (or by hand at https://claude.ai/customize/connectors: Add custom connector, the address `https://mindlist.ai/api/v1/mcp`), then upload the skill: download `mindlist-skill.zip` from https://github.com/mindlistai/mindlist/releases/latest and choose Customize, Skills, +, Create skill, Upload a skill (code execution must be on).
 - **Codex in an editor:** `codex mcp add mindlist --url https://mindlist.ai/api/v1/mcp`, then copy `plugins/mindlist/skills/mindlist` to `~/.agents/skills/mindlist`.
 - **Any other AI tool:** the connector's address is `https://mindlist.ai/api/v1/mcp`.
 

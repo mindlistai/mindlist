@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.5
+
+When you browse your saves or catch up on what's new, it lists them for you: only a search and a suggestion show them as cards.
+
+Where your app shows your saves as cards, it names them without links: tap a card to open it.
+
+In Claude, connecting starts at mindlist.ai/connect/claude, which opens Claude's connect box with mindlist filled in.
+
 ## 1.2.4
 
 When your app already shows your saves as cards, it doesn't list them again: it names the closest ones and says what's useful about them. It runs one search for a question about your saves.

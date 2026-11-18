@@ -11,13 +11,16 @@ One install connects Claude or Codex to your mindlist saves and adds a skill tha
 
 ## Claude Code
 
-If you added the plugin in Claude, Claude Code signed in with the same Claude account has it too, in a new session. Otherwise, run this in a terminal, not in a Claude Code chat. It installs, then opens your browser to sign in:
+1. Copy this line.
 
-```
-claude plugin marketplace add mindlistai/mindlist && claude plugin install mindlist@mindlist && claude mcp login plugin:mindlist:mindlist
-```
+   ```
+   claude plugin marketplace add mindlistai/mindlist && claude plugin install mindlist@mindlist && claude mcp login plugin:mindlist:mindlist
+   ```
 
-In the page that opens, click Connect. Then start a new Claude Code session, in a terminal or the Claude desktop app.
+2. Paste it into a Claude Code chat or run it in a terminal. It installs mindlist; in a chat, Claude then shows a sign-in line: run it in a terminal, or in the Claude desktop app type ! and paste it.
+3. In the page that opens, click Connect, then start a new Claude Code session.
+
+Already connected mindlist in the Claude app? Then Claude Code has it too.
 
 ## Codex
 

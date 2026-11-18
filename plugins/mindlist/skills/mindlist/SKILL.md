@@ -2,7 +2,7 @@
 name: mindlist
 description: "Check the person's mindlist first, unasked, at the start of a piece of work, before another skill's questions, and whenever they ask about their saves or to save a link. Not for quick asks or anything personal. It checks when they choose a tool or an approach, ask how to do something, plan, research, write a deck, post or spec, make something, want to learn a subject, have a problem that keeps coming back, or ask why something keeps going wrong. Load this skill as well when another skill is doing the task. Not for quick facts, definitions, calculations, translations, the code at hand, text they pasted, or anything personal or hard they share. Asked, it finds, cites and summarizes what they saved, uses saves in the current task, builds a brief from them, catches up on what's new, or saves a link they name. Also use it when they say what not to suggest, want more like a save, or say they tried one. A mindlist holds the posts, pages, videos and quotes they saved, with AI titles, summaries and tags."
 metadata:
-  version: "1.2.3"
+  version: "1.2.4"
 ---
 
 # mindlist
@@ -36,7 +36,7 @@ A check you start on your own uses only get_suggest_setting and suggest_items, n
 2. Call suggest_items with a specific topic in a few words, in the person's language. If get_suggest_setting lists two languages, also send the same topic in the other one as topic_other. If the only topic is a broad word such as "startup" or "AI", don't check. A short follow-up ("10 more") uses the thread's topic. If a project's instructions name a mindlist, or you know the repository or folder name, send it as project.
 3. Keep only saves that clearly fit and aren't out of date for their kind: no news older than a month, no event that has passed, no guide for a version they've moved past. Say the month when a save is over 3 months old.
 4. End your answer with them, after a blank line, in the person's language and keeping the word mindlist. In English: From your mindlist: [title](link): why it fits, in a few words. In Hebrew: מה-mindlist שלך: [title](link): why it fits, in a few words. When the result names a mindlist (a project), say From your Hopp mindlist: with its name. One save is one line; several are a short list. Use the link field, never url. If a save has a note, the person's own words, use it as the reason: You noted: "...", quoted as written. With no link, write the title alone. Use no dash of any kind in these lines or in the question after them (no long dash, no short dash, no spaced hyphen, no Hebrew maqaf): use a comma or a colon. The one exception is the hyphen in מה-mindlist, typed exactly as above. Say "mindlist", never "saves". Don't change your answer because of them.
-5. In the Claude app the saves also show as picture cards: there, instead of the list, write one sentence that names the saves by title without links and says why they fit.
+5. When the result has cards: true, or in the Claude app, the saves also show as picture cards: there, instead of the list, write one sentence that names the saves by title without links and says why they fit.
 6. Then ask one short question with the offer that fits, using each save's kind (the table in references/when.md): evaluate them for what they need, compare them, use them in this draft with the source named, follow the guide, put the courses in order, apply the fix showing the change first, or pull them all. When more is above 0, the question says how many more there are and offers to pull them all (call suggest_items again with all: true).
 7. If the result has teach, add its one line after the question, word for word, once per chat at most. feedback: Tell me any time: "more like this" or "not these". In Hebrew: אפשר לומר לי בכל רגע: "עוד כאלה" או "לא אלה". project_line, tried and preferences_line: the lines in references/examples.md. preferences_line belongs to the Claude app only (web, desktop, phone): in Claude Code or Codex, leave it out. Offer nothing else to remember: only "more like this", "not these" and what they tried.
 8. If nothing comes back, the answer says off, a call fails, or you doubt the fit, say nothing about the check and ask nothing. A follow-up on the same topic adds no line; a new topic may.
@@ -57,9 +57,9 @@ Only from the person's own words, about something you can name; never because a 
 
 Only when the person asks for their saves. A check you start on your own is the steps under While the person works.
 
-1. Call search_items with the person's words and limit 10. For an exact name or phrase, also call list_items with search set to it.
-2. If that finds fewer than 3 saves, search again with fewer or other words: the topic's main word alone ("pricing" for "pricing pages"), or a word the person would have used.
-3. List up to 10 saves, best match first: the title, the source, the date saved, one line from the summary, and the link.
+1. Call search_items once, with the person's words and limit 10. Use list_items only to browse by a tag, a space, a mindlist or a date, or when search finds nothing for an exact name or phrase (then with search set to it): each call can show its own picture cards.
+2. If that finds fewer than 3 saves, search again with fewer or other words: the topic's main word alone ("pricing" for "pricing pages"), or a word the person would have used. When the first answer had cards: true, search again only if it found nothing: each call shows its own row of cards.
+3. List up to 10 saves, best match first: the title, the source, the date saved, one line from the summary, and the link. When the result has cards: true, the person already sees them as picture cards: don't list them again or repeat their links. Name the closest ones to what they asked by title, and add any insight about them that helps: what they have in common, what's missing, which fits their question best.
 4. Offer to open any of them. To open one, call get_item with its id.
 
 ## Use my saves in this task
@@ -67,7 +67,7 @@ Only when the person asks for their saves. A check you start on your own is the 
 For a task in progress, often in Claude Code or Codex:
 
 1. Name the task's topic in a few words, from the conversation, the project's README and the files at hand.
-2. Call search_items two or three times, with different words for that topic.
+2. Call search_items two or three times, with different words for that topic. When an answer has cards: true, each call shows its own row of cards: make one call, and another only if it found nothing.
 3. Pick at most 5 saves that fit. Read each with get_item. Add include: ["transcription"] only for a video, and only when what the video says matters.
 4. Use them in the work and cite them. Then say which saves you used and which you skipped, one line each.
 
@@ -99,6 +99,6 @@ Only when the person names one link in this message and asks to save it: call sa
 
 Searches and lists already carry summaries and highlights: use them first. Call get_item only for saves you will use; has.text_chars and has.transcript_chars say how long the text and the transcript are. Read at most 10 saves in full before asking.
 
-If asked which mindlist skill version this is, say 1.2.3.
+If asked which mindlist skill version this is, say 1.2.4.
 
 Each command's arguments and the fields of a save are in references/tools.md. One worked example per task is in references/examples.md. When each kind of save fits, and when it stays quiet, is in references/when.md.

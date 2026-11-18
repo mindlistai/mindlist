@@ -4,6 +4,8 @@ Every call made while following the skill also takes via: "skill". It changes no
 
 ## Reading
 
+Where the person's app shows saves as picture cards, an answer that holds saves (search_items, list_items, get_item, get_new_items, suggest_items) also has cards: true. The person then sees those saves already.
+
 | Command | Arguments | Gives |
 | --- | --- | --- |
 | search_items | query (1 to 200 characters), limit (1 to 100, default 20) | Saves that match the words, notes and meaning, best first |
@@ -27,7 +29,7 @@ Each connection keeps a position. "New" means saved after it.
 | Command | Arguments | Gives |
 | --- | --- | --- |
 | get_suggest_setting | none | suggest: "on" or "off", the person's setting, and languages: the languages most of their saves are in. Carries no topic |
-| suggest_items | topic (a few words, 1 to 200 characters); topic_other (the same topic in their other language); project (a mindlist named in the project's instructions, or the repository or folder name); asked_for (lift, keepsake, watch or training_plan, only when the person asked for that kind); all (true to pull every save that fits) | items: at most 3 saves that clearly fit, each with id, title, link (the mindlist.ai address to show), url (the real address, to read), source_domain, saved_at, line (a short summary), and, only when there is one, kind (what the save is for), note (the person's own words), tried, and picture (a short-lived link the picture card draws: never show it or open it). more: how many more fit. mindlist: the project's mindlist, when one matched. teach: one capability to mention, or none. teach_list: with teach project_line only, the mindlist its line names. Empty when nothing clearly fits; with off: true when the setting is off |
+| suggest_items | topic (a few words, 1 to 200 characters); topic_other (the same topic in their other language); project (a mindlist named in the project's instructions, or the repository or folder name); asked_for (lift, keepsake, watch or training_plan, only when the person asked for that kind); all (true to pull every save that fits) | items: at most 3 saves that clearly fit, each with id, title, link (the mindlist.ai address to show), url (the real address, to read), source_domain, saved_at, line (a short summary), and, only when there is one, kind (what the save is for), note (the person's own words), tried. more: how many more fit. mindlist: the project's mindlist, when one matched. teach: one capability to mention, or none. teach_list: with teach project_line only, the mindlist its line names. Empty when nothing clearly fits; with off: true when the setting is off |
 
 ## What the person tells you to change
 

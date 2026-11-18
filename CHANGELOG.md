@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.4
+
+When your app already shows your saves as cards, it doesn't list them again: it names the closest ones and says what's useful about them. It runs one search for a question about your saves.
+
 ## 1.2.3
 
 When mindlist isn't signed in yet, it gives the step for where you are: in a terminal, type /mcp, choose mindlist, then Authenticate; in the Claude desktop app, type /mcp with nothing after it, open mindlist, then click Connect.
